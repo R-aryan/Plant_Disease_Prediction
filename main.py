@@ -1,6 +1,4 @@
-# main.py
-import tensorflow as tf
+from src.inference.app import app
 
-# print(tf.test.is_gpu_available)
-# print(tf.__version__)
-
+if __name__ == '__main__':
+    app.run(port=5001, debug=True)

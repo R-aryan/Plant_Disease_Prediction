@@ -36,3 +36,8 @@ def upload():
         file_path = os.path.join(
             base_path, 'uploads', secure_filename(f.filename))
         f.save(file_path)
+
+        # make prediction
+        prediction = model.model_predict(file_path)
+
+        return prediction
