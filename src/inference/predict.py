@@ -1,4 +1,3 @@
-
 import numpy as np
 import tensorflow as tf
 
@@ -15,11 +14,13 @@ class ModelPrediction:
     def __init__(self):
         # loading the settings
         self.target_size = Settings.TARGET_SIZE
-        self.model_path = Settings.MODEL_PATH
+        self.model_path = Settings.MODEL_PATH_INCEPTION
 
         # Load your trained model
         self.prediction_model = load_model(self.model_path)
         print(" Model Loaded Successfully....!!")
+
+        self.predicted_text = " "
 
     def preprocess_image(self, image_path):
         print(image_path)
@@ -39,3 +40,14 @@ class ModelPrediction:
         x = self.preprocess_image(image_path)
         prediction = self.prediction_model.predict(x)
         prediction = np.argmax(prediction, axis=1)
+
+        if prediction == 0:
+            self.predicted_text = "The leaf is diseased cotton leaf"
+        elif prediction == 1:
+            self.predicted_text = "The leaf is diseased cotton plant"
+        elif prediction == 2:
+            self.predicted_text = "The leaf is fresh cotton leaf"
+        else:
+            self.predicted_text = "The leaf is fresh cotton plant"
+
+        return self.predicted_text
