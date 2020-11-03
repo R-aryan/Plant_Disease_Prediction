@@ -21,5 +21,10 @@ An end to end application which predicts whether the cotton plant belongs to the
  - After performing the above step, run **main.py.**
  - After running the script **Flask Server** will start at **http://127.0.0.1:5001/** , Copy this URL and open it in your browser.
  - Your flask application is now up and running and should look something like this.
- ![Image of Landing Page](https://github.com/R-aryan/Bank_Note_Authentication_App/blob/feature/phase-1/src/static/demo_image_1.PNG). 
+ ![Image of Landing Page](https://github.com/R-aryan/Plant_Disease_Prediction/blob/feature/develop/src/msc/demo_image_2.PNG).
  
+ - Click on the **Choose** button and upload the plant image , after uploading the image the page will look something like this. 
+  ![Image of Landing Page](https://github.com/R-aryan/Plant_Disease_Prediction/blob/feature/develop/src/msc/demo_image_3.PNG).
+  
+ - After Uploading the Image, click on the **Predict** button, after few seconds the output will appear something like this.
+  ![Image of Landing Page](https://github.com/R-aryan/Plant_Disease_Prediction/blob/feature/develop/src/msc/demo_image_4.PNG).
